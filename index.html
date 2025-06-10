@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giga Trench Auto - The Ultimate Meme Coin</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Bebas Neue (for GTA style headings) and Inter (for body text) -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Bebas Neue to all headings and specific elements for GTA feel */
+        h1, h2, h3, h4, .nav-link, button {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        /* Set default font for body */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom GTA-like button styling */
+        button {
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Neon glow effect for hero button */
+        .neon-glow {
+          box-shadow: 0 0 5px rgba(255, 140, 0, 0.7), 0 0 10px rgba(255, 140, 0, 0.5), 0 0 15px rgba(255, 140, 0, 0.3);
+        }
+
+        /* Pulse animation for the button */
+        @keyframes pulse {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.03); }
+          100% { transform: scale(1); }
+        }
+        .animate-pulse-once {
+          animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        /* Fade-in-up animation for hero text */
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fade-in-up {
+          animation: fadeInUp 0.8s ease-out forwards;
+        }
+        .animate-fade-in-up.delay-200 {
+          animation-delay: 0.2s;
+        }
+
+        /* Neon text shadow for headings */
+        .neon-text-shadow {
+          text-shadow: 0 0 5px rgba(255, 140, 0, 0.7), 0 0 10px rgba(255, 140, 0, 0.5), 0 0 15px rgba(255, 140, 0, 0.3);
+        }
+
+        /* Glitch effect for red headings */
+        @keyframes glitch {
+          0% { transform: translate(0); text-shadow: none; }
+          20% { transform: translate(-2px, 2px); text-shadow: 2px -2px 0 red; }
+          40% { transform: translate(-2px, -2px); text-shadow: -2px 2px 0 lime; }
+          60% { transform: translate(2px, 2px); text-shadow: 2px 2px 0 blue; }
+          80% { transform: translate(2px, -2px); text-shadow: -2px -2px 0 purple; }
+          100% { transform: translate(0); text-shadow: none; }
+        }
+        .glitch-text {
+          animation: glitch 1.5s infinite alternate;
+        }
+
+        /* Card glow effect on hover */
+        .card-glow:hover {
+          box-shadow: 0 0 15px rgba(255, 99, 71, 0.7), 0 0 30px rgba(255, 99, 71, 0.5); /* Tomato red glow */
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-black to-gray-900 text-gray-100">
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full bg-black bg-opacity-90 z-50 shadow-lg border-b border-orange-600">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo/Title -->
+            <div class="flex items-center space-x-2">
+                <!-- Giga Trench Auto Icon (Simple SVG for GTA star) -->
+                <svg class="w-8 h-8 text-orange-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M10 1.2a.8.8 0 011.532.484l2.502 4.492 4.908.713a.8.8 0 01.444 1.355l-3.55 3.456.839 4.887a.8.8 0 01-1.161.844L10 16.591l-4.385 2.305a.8.8 0 01-1.161-.844l.839-4.887-3.55-3.456a.8.8 0 01.444-1.355l4.908-.713L8.468 1.684A.8.8 0 0110 1.2z" clip-rule="evenodd" />
+                </svg>
+                <h1 class="text-2xl text-orange-500 tracking-wide uppercase">
+                    Giga Trench Auto
+                </h1>
+            </div>
+            <!-- Navigation Links -->
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="nav-link text-gray-300 hover:text-orange-300 transition duration-300 cursor-pointer">Home</a></li>
+                <li><a href="#about" class="nav-link text-gray-300 hover:text-orange-300 transition duration-300 cursor-pointer">About</a></li>
+                <li><a href="#tokenomics" class="nav-link text-gray-300 hover:text-orange-300 transition duration-300 cursor-pointer">Tokenomics</a></li>
+                <li><a href="#roadmap" class="nav-link text-gray-300 hover:text-orange-300 transition duration-300 cursor-pointer">Roadmap</a></li>
+                <li><a href="#how-to-buy" class="nav-link text-gray-300 hover:text-orange-300 transition duration-300 cursor-pointer">How to Buy</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="pt-20"> <!-- Padding to offset fixed nav bar -->
+
+        <!-- Hero Section -->
+        <section id="home" class="relative h-screen flex items-center justify-center text-center overflow-hidden bg-cover bg-center"
+          style="background-image: url('https://placehold.co/1920x1080/000000/F59E0B?text=Giga+Trench+Auto+Cityscape')">
+          <!-- Overlay for grunge/dark effect -->
+          <div class="absolute inset-0 bg-black opacity-70"></div>
+          <div class="relative z-10 p-8 rounded-lg shadow-2xl backdrop-blur-sm bg-black bg-opacity-60 border-2 border-orange-700 max-w-4xl mx-auto">
+            <h2 class="text-6xl md:text-8xl text-orange-500 mb-6 drop-shadow-lg tracking-tight uppercase animate-fade-in-up">
+              Giga Trench Auto
+            </h2>
+            <p class="text-2xl md:text-3xl text-gray-200 mb-8 font-light italic animate-fade-in-up delay-200">
+              Where the streets are paved with GIGA, and legends are forged.
+            </p>
+            <button class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 active:scale-95 border-2 border-orange-800 text-xl uppercase tracking-wide neon-glow animate-pulse-once"
+              onclick="document.getElementById('how-to-buy').scrollIntoView({ behavior: 'smooth' });">
+              Join the Heist!
+            </button>
+          </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 px-4 bg-gray-950 bg-opacity-90 border-t border-b border-orange-700">
+          <div class="container mx-auto max-w-3xl text-center">
+            <h3 class="text-4xl text-orange-500 mb-8 uppercase neon-text-shadow">
+              The Mission Briefing
+            </h3>
+            <div class="flex flex-col md:flex-row items-center gap-8 mb-8">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/1a202c/F59E0B?text=GTA+City+Map" alt="Giga Trench Auto City Map" class="rounded-xl shadow-lg border-2 border-orange-600 w-full h-auto object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FF0000/FFFFFF?text=Image+Error';"/>
+                </div>
+                <div class="md:w-1/2 text-left">
+                    <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                      Giga Trench Auto ($GTA) isn't just another meme coin; it's a digital declaration of freedom in the chaotic streets of crypto. Inspired by the legends of the underworld, $GTA is built for the daring, the ambitious, and those ready to carve their own path. We're here to disrupt, entertain, and deliver maximum GIGA energy to the blockchain.
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                      Forget the rules, embrace the grind, and prepare for a ride through the Giga Trench that will leave the crypto world in awe. This is more than a coin; it's an experience.
+                    </p>
+                </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tokenomics Section -->
+        <section id="tokenomics" class="py-20 px-4 bg-gray-900 bg-opacity-90 border-t border-b border-red-700">
+          <div class="container mx-auto max-w-4xl text-center">
+            <h3 class="text-4xl text-red-500 mb-10 uppercase glitch-text">
+              The Arsenal
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <!-- Total Supply Card -->
+              <div class="bg-gray-800 p-6 rounded-xl shadow-lg border-2 border-red-600 transform hover:scale-105 transition-transform duration-300 card-glow flex flex-col items-center">
+                <img src="https://placehold.co/100x100/333333/FFFFFF?text=Supply" alt="Total Supply Icon" class="mb-4 rounded-full" onerror="this.onerror=null; this.src='https://placehold.co/100x100/FF0000/FFFFFF?text=Error';"/>
+                <h4 class="text-3xl text-red-400 mb-3 uppercase">Total Supply</h4>
+                <p class="text-5xl font-black text-gray-100">6.9 Billion</p>
+                <p class="text-sm text-gray-400 mt-2">A limited edition run for the true OGs.</p>
+              </div>
+
+              <!-- Distribution Card -->
+              <div class="bg-gray-800 p-6 rounded-xl shadow-lg border-2 border-red-600 transform hover:scale-105 transition-transform duration-300 card-glow flex flex-col items-center">
+                <img src="https://placehold.co/100x100/333333/FFFFFF?text=Distro" alt="Distribution Icon" class="mb-4 rounded-full" onerror="this.onerror=null; this.src='https://placehold.co/100x100/FF0000/FFFFFF?text=Error';"/>
+                <h4 class="text-3xl text-red-400 mb-3 uppercase">Distribution</h4>
+                <ul class="text-left text-lg text-gray-200 list-disc list-inside">
+                  <li>70% Liquidity Pool</li>
+                  <li>15% Marketing & Dev</li>
+                  <li>10% Community Airdrops</li>
+                  <li>5% Team Allocation</li>
+                </ul>
+                <p class="text-sm text-gray-400 mt-4">Fair launch, no pre-sale, straight to the streets.</p>
+              </div>
+
+              <!-- Taxes Card -->
+              <div class="bg-gray-800 p-6 rounded-xl shadow-lg border-2 border-red-600 transform hover:scale-105 transition-transform duration-300 card-glow flex flex-col items-center">
+                <img src="https://placehold.co/100x100/333333/FFFFFF?text=Taxes" alt="Taxes Icon" class="mb-4 rounded-full" onerror="this.onerror=null; this.src='https://placehold.co/100x100/FF0000/FFFFFF?text=Error';"/>
+                <h4 class="text-3xl text-red-400 mb-3 uppercase">Taxes</h4>
+                <ul class="text-left text-lg text-gray-200 list-disc list-inside">
+                  <li>2% Buy Tax (Marketing/Dev)</li>
+                  <li>2% Sell Tax (LP/Burn)</li>
+                </ul>
+                <p class="text-sm text-gray-400 mt-4">Fueling our empire, one transaction at a time.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Roadmap Section -->
+        <section id="roadmap" class="py-20 px-4 bg-gray-950 bg-opacity-90 border-t border-b border-orange-700">
+          <div class="container mx-auto max-w-5xl text-center">
+            <h3 class="text-4xl text-orange-500 mb-12 uppercase neon-text-shadow">
+              The Blueprint: Future Operations
+            </h3>
+            <div class="relative">
+              <!-- Roadmap timeline line -->
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-1.5 h-full bg-orange-600 rounded-full hidden md:block"></div>
+
+              <!-- Roadmap items -->
+              <div class="space-y-16">
+                <!-- Phase 1 -->
+                <div class="flex flex-col md:flex-row items-center justify-between relative bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-orange-600 transform hover:scale-105 transition-transform duration-300 card-glow">
+                  <div class="md:w-1/2 text-left md:pr-8 mb-4 md:mb-0">
+                    <h4 class="text-3xl text-orange-400 mb-2 uppercase">Phase 1: The Setup</h4>
+                    <ul class="text-lg text-gray-300 list-disc list-inside">
+                      <li>Launch on DEX (Uniswap/PancakeSwap)</li>
+                      <li>Initial Marketing Campaign (Street Art & Telegram Raids)</li>
+                      <li>Community Building & Telegram/Discord Setup</li>
+                      <li>Website Launch & Whitepaper Release (The Manual)</li>
+                    </ul>
+                  </div>
+                  <div class="md:w-1/2 flex justify-center md:justify-end">
+                    <img src="https://placehold.co/200x200/F59E0B/FFFFFF?text=Phase+1+Launch" alt="Phase 1 Launch" class="w-48 h-48 rounded-full border-4 border-orange-500 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/200x200/FF0000/FFFFFF?text=Error';"/>
+                  </div>
+                  <!-- Dot on timeline -->
+                  <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-orange-600 rounded-full border-4 border-white hidden md:block"></div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="flex flex-col md:flex-row-reverse items-center justify-between relative bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-orange-600 transform hover:scale-105 transition-transform duration-300 card-glow">
+                  <div class="md:w-1/2 text-right md:pl-8 mb-4 md:mb-0">
+                    <h4 class="text-3xl text-orange-400 mb-2 uppercase">Phase 2: Turf Wars</h4>
+                    <ul class="text-lg text-gray-300 list-disc list-inside">
+                      <li>CEX Listings (Minor Exchanges)</li>
+                      <li>Influencer Partnerships & Meme Raids</li>
+                      <li>Community Contests & Airdrops</li>
+                      <li>NFT Collection Launch (Giga Trench Auto Characters)</li>
+                    </ul>
+                  </div>
+                  <div class="md:w-1/2 flex justify-center md:justify-start">
+                    <img src="https://placehold.co/200x200/F59E0B/FFFFFF?text=Phase+2+Wars" alt="Phase 2 Turf Wars" class="w-48 h-48 rounded-full border-4 border-orange-500 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/200x200/FF0000/FFFFFF?text=Error';"/>
+                  </div>
+                  <!-- Dot on timeline -->
+                  <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-orange-600 rounded-full border-4 border-white hidden md:block"></div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="flex flex-col md:flex-row items-center justify-between relative bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-orange-600 transform hover:scale-105 transition-transform duration-300 card-glow">
+                  <div class="md:w-1/2 text-left md:pr-8 mb-4 md:mb-0">
+                    <h4 class="text-3xl text-orange-400 mb-2 uppercase">Phase 3: Empire Building</h4>
+                    <ul class="text-lg text-gray-300 list-disc list-inside">
+                      <li>Tier 1 CEX Listings</li>
+                      <li>Giga Trench Auto Mini-Game Development</li>
+                      <li>Major Brand Partnerships & Collaborations</li>
+                      <li>Global Community Expansion & Events</li>
+                    </ul>
+                  </div>
+                  <div class="md:w-1/2 flex justify-center md:justify-end">
+                    <img src="https://placehold.co/200x200/F59E0B/FFFFFF?text=Phase+3+Empire" alt="Phase 3 Empire Building" class="w-48 h-48 rounded-full border-4 border-orange-500 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/200x200/FF0000/FFFFFF?text=Error';"/>
+                  </div>
+                  <!-- Dot on timeline -->
+                  <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-orange-600 rounded-full border-4 border-white hidden md:block"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- How to Buy Section -->
+        <section id="how-to-buy" class="py-20 px-4 bg-gray-900 bg-opacity-90 border-t border-b border-red-700">
+          <div class="container mx-auto max-w-4xl text-center">
+            <h3 class="text-4xl text-red-500 mb-10 uppercase glitch-text">
+              Recruitment: How to Join the Crew (Solana Network)
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <!-- Step 1 -->
+              <div class="bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-red-600 hover:border-red-400 transition-all duration-300 card-glow flex flex-col items-center">
+                <img src="https://placehold.co/100x100/800000/FFFFFF?text=Wallet" alt="Wallet Icon" class="mb-4 rounded-full" onerror="this.onerror=null; this.src='https://placehold.co/100x100/FF0000/FFFFFF?text=Error';"/>
+                <div class="text-5xl font-black text-red-500 mb-4">1.</div>
+                <h4 class="text-3xl text-gray-100 mb-3 uppercase">Get a Solana Wallet</h4>
+                <p class="text-lg text-gray-300 leading-relaxed">
+                  First, you'll need a Solana-compatible crypto wallet like <span class="font-bold text-red-400">Phantom</span> or <span class="font-bold text-red-400">Solflare</span>. These are your virtual safe houses for Giga Trench Auto on the Solana network.
+                </p>
+                <a href="#" class="inline-block mt-6 text-red-400 hover:text-red-300 transition-colors duration-300 underline">Learn More About Solana Wallets</a>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-red-600 hover:border-red-400 transition-all duration-300 card-glow flex flex-col items-center">
+                <img src="https://placehold.co/100x100/800000/FFFFFF?text=Fund" alt="Fund Wallet Icon" class="mb-4 rounded-full" onerror="this.onerror=null; this.src='https://placehold.co/100x100/FF0000/FFFFFF?text=Error';"/>
+                <div class="text-5xl font-black text-red-500 mb-4">2.</div>
+                <h4 class="text-3xl text-gray-100 mb-3 uppercase">Fund Your Wallet with SOL</h4>
+                <p class="text-lg text-gray-300 leading-relaxed">
+                  Purchase Solana ($SOL) from an exchange like Coinbase, Binance, or Kraken, and send it to your Solana wallet. This is your initial capital for the heist.
+                </p>
+                <a href="#" class="inline-block mt-6 text-red-400 hover:text-red-300 transition-colors duration-300 underline">Find Exchanges</a>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-red-600 hover:border-red-400 transition-all duration-300 card-glow flex flex-col items-center">
+                <img src="https://placehold.co/100x100/800000/FFFFFF?text=Swap" alt="Swap Icon" class="mb-4 rounded-full" onerror="this.onerror=null; this.src='https://placehold.co/100x100/FF0000/FFFFFF?text=Error';"/>
+                <div class="text-5xl font-black text-red-500 mb-4">3.</div>
+                <h4 class="text-3xl text-gray-100 mb-3 uppercase">Swap for $GTA on Solana</h4>
+                <p class="text-lg text-gray-300 leading-relaxed">
+                  Connect your wallet to a Solana-based decentralized exchange (DEX) like <span class="font-bold text-red-400">Raydium</span> or <span class="font-bold text-red-400">Jupiter</span>. Find $GTA using its contract address and swap your SOL.
+                </p>
+                <div class="mt-6">
+                  <span id="contractAddress" class="bg-gray-700 text-gray-200 px-4 py-2 rounded-md font-mono text-sm break-all">
+                    0xGigaTrenchAutoContractAddress... <!-- Placeholder, replace with actual Solana address -->
+                  </span>
+                  <button
+                    class="ml-2 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-md shadow-md transition-colors duration-300"
+                    onclick="copyContractAddress()">
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-red-600 hover:border-red-400 transition-all duration-300 card-glow flex flex-col items-center">
+                <img src="https://placehold.co/100x100/800000/FFFFFF?text=Hold" alt="Hold Icon" class="mb-4 rounded-full" onerror="this.onerror=null; this.src='https://placehold.co/100x100/FF0000/FFFFFF?text=Error';"/>
+                <div class="text-5xl font-black text-red-500 mb-4">4.</div>
+                <h4 class="text-3xl text-gray-100 mb-3 uppercase">Hold & Conquer</h4>
+                <p class="text-lg text-gray-300 leading-relaxed">
+                  Once the transaction is confirmed, you're officially part of the Giga Trench Auto crew on the Solana network! Hold your $GTA, engage with the community, and watch the legend grow.
+                </p>
+                <a href="#" class="inline-block mt-6 text-red-400 hover:text-red-300 transition-colors duration-300 underline">Join Our Community</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Socials/Footer Section -->
+        <footer class="py-10 px-4 bg-black text-gray-400 text-center border-t border-orange-600">
+          <div class="container mx-auto">
+            <h4 class="text-3xl text-orange-500 mb-6 uppercase">Connect with the Syndicate</h4>
+            <div class="flex justify-center space-x-6 mb-8">
+              <!-- Social Media Icons (using SVG inline for simple icons) -->
+              <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-orange-500 transition-colors duration-300">
+                <svg class="w-10 h-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.186 6.843c.123 0 .245-.022.366-.067.433-.163.665-.62.502-1.053-.163-.433-.62-.665-1.053-.502-.433.163-.665.62-.502 1.053.078.207.25.378.461.472zm-2.022 2.022c.123 0 .245-.022.366-.067.433-.163.665-.62.502-1.053-.163-.433-.62-.665-1.053-.502-.433.163-.665.62-.502 1.053.078.207.25.378.461.472zM12 5.5a6.5 6.5 0 00-6.5 6.5c0 3.585 2.915 6.5 6.5 6.5s6.5-2.915 6.5-6.5a6.5 6.5 0 00-6.5-6.5zm0 11.5a5 5 0 110-10 5 5 0 010 10zM12 9.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5z"/></svg> <!-- Placeholder for Discord -->
+                <span class="sr-only">Discord</span>
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-orange-500 transition-colors duration-300">
+                <svg class="w-10 h-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.46 6c-.77.34-1.6.56-2.48.66.89-.53 1.56-1.37 1.88-2.37-.83.49-1.75.85-2.73 1.04C18.11 4.5 17.06 4 15.93 4c-2.35 0-4.25 1.9-4.25 4.25 0 .33.04.65.11.95-3.53-.18-6.66-1.87-8.76-4.43-.37.64-.58 1.38-.58 2.19 0 1.47.75 2.76 1.9 3.5-.7-.02-1.36-.22-1.93-.53v.05c0 2.06 1.47 3.79 3.42 4.17-.36.1-.74.15-1.14.15-.28 0-.55-.03-.81-.08.54 1.7 2.1 2.93 3.96 2.96-1.46 1.14-3.3 1.82-5.3 1.82-.35 0-.69-.02-1.03-.06C4.64 20.37 6.94 21 9.4 21c7.08 0 10.94-5.85 10.94-10.94 0-.17-.0-.34-.01-.5-.75-.54-1.68-.9-2.6-1.07z"/></svg> <!-- Placeholder for X (Twitter) -->
+                <span class="sr-only">X (Twitter)</span>
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-orange-500 transition-colors duration-300">
+                <svg class="w-10 h-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5.74 7.64l-2.02 9.07c-.16.71-.85 1.14-1.57.94l-3.8-.97-1.8-1.8-3.79 2.77c-.55.4-.95.1-.79-.58L7.33 8.35c.16-.7.83-1.12 1.54-.95l8.87 2.06c.71.16 1.14.85.94 1.57z"/></svg> <!-- Placeholder for Telegram -->
+                <span class="sr-only">Telegram</span>
+              </a>
+            </div>
+            <p class="text-sm">&copy; 2024 Giga Trench Auto. All Rights Reserved. This is a meme coin. Do your own research.</p>
+            <p class="text-xs text-gray-500 mt-2">Inspired by the legends of digital open-worlds. No affiliation with Grand Theft Auto or Rockstar Games.</p>
+          </div>
+        </footer>
+    </main>
+
+    <script>
+        // Smooth scroll function for navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Copy contract address to clipboard
+        function copyContractAddress() {
+            const contractAddress = document.getElementById('contractAddress').innerText;
+            // Use document.execCommand('copy') for iFrame compatibility
+            const el = document.createElement('textarea');
+            el.value = contractAddress;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            // In a real application, you'd show a custom modal or toast notification here.
+            // console.log('Contract address copied!'); // You can uncomment this for debugging in console.
+            alert('Contract address copied!'); // Added back for demonstration, but consider replacing with a custom modal.
+        }
+
+        // Add error handling for image loading
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.onerror = function() {
+                    this.src = 'https://placehold.co/100x100/FF0000/FFFFFF?text=Error'; // Fallback image for errors
+                    this.alt = 'Image failed to load';
+                };
+            });
+        });
+    </script>
+</body>
+</html>
